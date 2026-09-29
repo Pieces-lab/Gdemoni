@@ -1,4 +1,4 @@
-<p align="center"><img src="assets/portfolio-cover.svg" alt="Gdemoni 个人作品集：产品架构、AI 应用与项目实践" width="100%"></p>
+<p align="center"><img src="assets/portfolio-cover.png" alt="Gdemoni personal world 手绘花园门票风格封面" width="100%"></p>
 
 <p align="center"><b>你好，我是 Gdemoni。</b><br>软件工程专业在读，把对 AI 和工具的好奇心做成可以使用的项目。</p>
 
@@ -30,19 +30,17 @@
 
 我是一名软件工程专业的大三学生，目前在探索自己愿意长期投入的方向。2026 年 5 月至 9 月，我在上海七牛信息技术有限公司产品架构部实习，担任五人小组组长，负责 Askio 运维排障 AI 助手的架构设计、技术选型与 Agent 核心实现。
 
-除了团队项目，我还做了课程教学数字人、多 Agent 旅行助手和自建域名邮箱。这里介绍我的职责与实践过程；更完整的个人记录在 [zshgdemoni.me](https://zshgdemoni.me/)。
+我把 [zshgdemoni.me](https://zshgdemoni.me/) 做成一座持续生长的“数字花园”。访客从一张免费花园通行证进入，沿着园丁档案、项目温室、工具棚、成长小径和花园信箱，可以看到我的项目、实习经历与学习记录。除了团队项目，我还做了课程教学数字人、多 Agent 旅行助手和自建域名邮箱。
 
 ## 代表作品
 
-### Askio · 运维排障 AI 助手｜产品架构实习
+### Gdemoni personal world · 我的数字花园
 
-**上海七牛信息技术有限公司 · 产品架构部｜2026.05—2026.09｜五人小组组长**
+<a href="https://zshgdemoni.me/"><img src="assets/personal-site.png" alt="Gdemoni personal world 个人网站的花园通行证入口" width="100%"></a>
 
-Askio 针对运维排障中的三个难点：长对话里的排查方向难追踪，指标、日志和 Trace 证据分散，过往经验难以复用。我们用可分叉与汇聚的调查图组织排查，让 Agent 并行取证，并允许用户在过程中打断和纠偏。
+这是一座可以随意探索的个人花园：撕下门票进入后，可以浏览“关于我”、项目、工具和成长经历，也能通过花园信箱与我联系。网站持续更新，收集我做过的作品、写下的记录，以及大学期间不断尝试和学习的过程。
 
-我主导整体架构与技术选型，并负责 Agent 核心链路：将调查建模为“根节点 → 排查节点 → 故障域”，接入指标、日志与 Trace 工具；将完成的调查沉淀为“故障现象 → 故障域 → 排障思路”，通过 RAG 召回相似经验，再用当前数据验证。系统以事件协调调查图变更、工具调用和审批，通过 SSE 向前端推送进展。
-
-**[Askio 官网 ↗](https://www.askio.site/)** · [项目与实习详情](projects/askio.md)
+**[进入我的个人网站 ↗](https://zshgdemoni.me/)**
 
 ## 项目陈列室
 
