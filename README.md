@@ -1,53 +1,85 @@
-# Gdemoni · 让想法变成可以使用的作品
+<p align="center"><img src="assets/portfolio-cover.svg" alt="Gdemoni 个人作品集：产品架构、AI 应用与项目实践" width="100%"></p>
 
-<p align="center">软件工程专业在读 · 产品架构与 AI 应用实践</p>
+<p align="center"><b>你好，我是 Gdemoni。</b><br>软件工程专业在读，把对 AI 和工具的好奇心做成可以使用的项目。</p>
+
+<p align="center">
+  <a href="#为什么加入-pieces-lab">为什么加入</a> ·
+  <a href="#我的初心">我的初心</a> ·
+  <a href="#关于我">关于我</a> ·
+  <a href="#代表作品">代表作品</a> ·
+  <a href="#项目陈列室">项目陈列室</a> ·
+  <a href="#学习与记录">学习与记录</a> ·
+  <a href="#联系我">联系我</a>
+</p>
 
 <p align="center">
   <a href="https://zshgdemoni.me/">个人网站</a> ·
   <a href="https://github.com/gdemoni">GitHub</a> ·
-  <a href="https://x.com/Gdemonizsh">X</a> ·
   <a href="mailto:zhang2718827630@gmail.com">邮箱</a>
 </p>
 
-你好，我是 Gdemoni，一名软件工程专业的大三学生。我关注 AI 如何进入真实的产品流程，也喜欢把对工具和交互的好奇心做成可以体验的项目。这个仓库集中介绍我的实习经历与项目实践；更完整的个人记录在 [zshgdemoni.me](https://zshgdemoni.me/)。
-
 ## 为什么加入 Pieces Lab
 
-我希望在这里分享自己的个人网站、实习实践与项目经历，结识更多愿意动手创造的人。我的初心是从真实问题出发，把脑海里的想法逐步做出来，并把过程中的尝试、问题与收获记录下来，供彼此交流。
+我想分享自己的个人网站、实习经历和项目实践，也希望在这里结识更多愿意动手创造的人。把做过的事放进同一个展示空间，可以让交流从具体的作品开始。
 
-## 实习经历 · Askio 运维排障 AI 助手
+## 我的初心
 
-**上海七牛信息技术有限公司｜产品架构部 · 产品架构实习生｜2026.05—2026.09**<br>
-**五人小组组长，负责整体架构设计、技术选型与 Agent 核心实现。** [查看 Askio 官网 ↗](https://www.askio.site/)
+我一直对 AI、编程和新工具保持好奇，也常有想亲手实现的点子。我想从真实问题出发，做出能被人使用的东西，同时留下尝试、遇到的问题和学到的经验。
 
-Askio 面向运维排障中“排查方向难追踪、指标与日志证据分散、历史经验难复用”等问题。我们把一次排障组织成可分叉、汇聚和排除方向的调查图，让 Agent 围绕当前证据推进分析，同时保留人工打断与纠偏的入口。
+## 关于我
 
-- **调查图与 Agent 工作流：**将排查过程建模为“根节点 → 排查节点 → 故障域”，由 Agent 拆解问题、调用指标、日志和 Trace 工具，并在信息不足时继续追问。
-- **经验沉淀与复用：**把已完成的调查压缩为“故障现象 → 故障域 → 排障思路”的结构，通过 RAG 召回相似经验，再用当前数据重新验证。
-- **系统架构：**以调查图变更、消息增量、工具调用等事件协调前后端，并通过 SSE 推送进展；基于 NestJS、Fastify、ts-rest 与 Zod 组织 HTTP / SSE 接口合同，使用 PostgreSQL / pgvector、BullMQ / Redis 支撑存储与异步任务。
+我是一名软件工程专业的大三学生，目前在探索自己愿意长期投入的方向。2026 年 5 月至 9 月，我在上海七牛信息技术有限公司产品架构部实习，担任五人小组组长，负责 Askio 运维排障 AI 助手的架构设计、技术选型与 Agent 核心实现。
 
-这段实习让我从单个功能的实现走向系统层面的设计：既要让 Agent 有清晰的决策与取证路径，也要让用户看得懂、能介入整个排障过程。
+除了团队项目，我还做了课程教学数字人、多 Agent 旅行助手和自建域名邮箱。这里介绍我的职责与实践过程；更完整的个人记录在 [zshgdemoni.me](https://zshgdemoni.me/)。
 
-## 项目经历
+## 代表作品
 
-### [EduAvatar · 课程教学数字人](https://github.com/gdemoni/EduAvatar)
+### Askio · 运维排障 AI 助手｜产品架构实习
 
-面向课程辅导的多模态 AI 数字人。学生提出语音问题后，系统完成语音识别，使用 LangGraph 区分知识讲解、题目求解等场景，结合课程资料检索生成回答，再通过语音合成、唇形同步与 WebRTC 在浏览器中呈现讲解。
+**上海七牛信息技术有限公司 · 产品架构部｜2026.05—2026.09｜五人小组组长**
 
-我重点实践了 **Agent 分场景编排、课程 RAG 和多模态交互链路**：使用 BGE + FAISS 检索本地课程资料，未命中时补充网络搜索；把生成答案改写为适合朗读的内容，再串联 EdgeTTS、Wav2Lip 与浏览器音视频传输。[项目 Wiki](https://github.com/gdemoni/EduAvatar/wiki)记录了搭建过程。
+Askio 针对运维排障中的三个难点：长对话里的排查方向难追踪，指标、日志和 Trace 证据分散，过往经验难以复用。我们用可分叉与汇聚的调查图组织排查，让 Agent 并行取证，并允许用户在过程中打断和纠偏。
 
-### [Travel Agent · 多 Agent 旅行助手](https://github.com/gdemoni/agent_ctrip_assistant)
+我主导整体架构与技术选型，并负责 Agent 核心链路：将调查建模为“根节点 → 排查节点 → 故障域”，接入指标、日志与 Trace 工具；将完成的调查沉淀为“故障现象 → 故障域 → 排障思路”，通过 RAG 召回相似经验，再用当前数据验证。系统以事件协调调查图变更、工具调用和审批，通过 SSE 向前端推送进展。
 
-围绕航班、酒店、租车和旅行推荐，使用 LangGraph / LangChain 组织 **1 个主助理与 4 个领域助理**。主助理理解需求并委派任务；查询工具可以直接执行，预订、改签、取消等修改类操作在执行前暂停，等待用户确认。
+**[Askio 官网 ↗](https://www.askio.site/)** · [项目与实习详情](projects/askio.md)
 
-后端还实现了政策 FAQ 的 BM25 + BGE 混合检索与重排，并使用 FastAPI 提供工作流接口。项目目前主要展示后端编排、检索与服务设计，前端仍在开发中；仓库中的业务数据为示例数据，不提供真实订票服务。
+## 项目陈列室
 
-### [Gdemoni Mail · 自建域名邮箱](https://github.com/gdemoni/cloud-mail)
+| 项目 | 在做什么 | 方向 / 状态 |
+| --- | --- | --- |
+| [Askio](projects/askio.md) | 用调查图、Agent 取证与经验检索辅助运维排障；负责架构设计和 Agent 核心实现。 | 产品架构 · 实习项目 |
+| [EduAvatar](https://github.com/gdemoni/EduAvatar) | 将课程检索、分场景讲解、语音合成和唇形同步串成数字人教学流程。 | AI 教学 · 项目实践 |
+| [Travel Agent](https://github.com/gdemoni/agent_ctrip_assistant) | 用主助理与四个领域助理处理旅行需求，修改类操作先等待用户确认。 | 多 Agent · 后端开发中 |
+| [Gdemoni Mail](https://github.com/gdemoni/cloud-mail) | 基于开源 Cloud Mail 部署和维护自己的域名邮箱。 | 开源部署 · 持续维护 |
 
-基于开源项目 Cloud Mail，在自己的域名上部署和维护 [@zshgdemoni.me 邮箱服务](https://mail.zshgdemoni.me/)。这是一项**开源项目部署与运维实践**：我负责自有域名接入、部署与日常维护；邮件收发等基础能力来自原项目。通过它，我进一步熟悉了 Cloudflare Workers、D1 / KV / R2 等服务的组合与实际运行。
+**[查看我的更多仓库 ↗](https://github.com/gdemoni?tab=repositories)**
 
-## 持续学习
+## 学习与记录
 
-我正在继续学习 TypeScript、Java 和 Go，也持续体验 AI 开发工具。比起罗列技术名词，我更希望通过项目说明自己如何理解问题、做出选择，并把一个想法逐步推进为可以使用的东西。
+我会把感兴趣的想法做成项目，也记录其中的设计取舍和实现过程。[EduAvatar 项目 Wiki](https://github.com/gdemoni/EduAvatar/wiki)整理了课程数字人的搭建步骤；[个人网站](https://zshgdemoni.me/)继续收录项目、文章与成长经历。
 
-欢迎访问我的[个人网站](https://zshgdemoni.me/)了解更多，也可以通过 [GitHub](https://github.com/gdemoni)、[X](https://x.com/Gdemonizsh) 或[邮件](mailto:zhang2718827630@gmail.com)与我交流。
+## 技术与工具
+
+<p><code>Python</code> <code>FastAPI</code> <code>LangGraph / LangChain</code> <code>RAG</code> <code>FAISS</code> <code>NestJS / Fastify</code> <code>PostgreSQL / pgvector</code> <code>Redis / BullMQ</code> <code>Cloudflare Workers</code></p>
+
+<sub>以上是项目与实习中接触的技术；TypeScript、Java 和 Go 仍在持续学习。</sub>
+
+## 联系我
+
+- 个人网站：[zshgdemoni.me](https://zshgdemoni.me/)
+- GitHub：[@gdemoni](https://github.com/gdemoni)
+- X：[@Gdemonizsh](https://x.com/Gdemonizsh)
+- 邮箱：[zhang2718827630@gmail.com](mailto:zhang2718827630@gmail.com)
+- 社区：[Pieces Lab](https://github.com/Pieces-lab)
+
+<details>
+<summary><b>关于这个作品集仓库</b></summary>
+
+这是我在 Pieces Lab 的个人展示空间，按[个人模板](https://github.com/Pieces-lab/Peronal-Template)整理了介绍、代表作品、项目与联系方式。Askio 的实习与项目内容见 [projects/askio.md](projects/askio.md)；其他项目的代码和详细说明以各自仓库为准。封面来源见 [ATTRIBUTION.md](ATTRIBUTION.md)。
+
+</details>
+
+---
+
+<p align="center"><b>把好奇心做成可以使用的东西。</b><br><sub>GDEMONI / A PERSONAL COLLECTION · PIECES LAB</sub></p>
