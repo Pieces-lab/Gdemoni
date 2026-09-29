@@ -30,7 +30,7 @@
 
 我是一名软件工程专业的大三学生，目前在探索自己愿意长期投入的方向。2026 年 5 月至 9 月，我在上海七牛信息技术有限公司产品架构部实习，担任五人小组组长，负责 Askio 运维排障 AI 助手的架构设计、技术选型与 Agent 核心实现。
 
-我把 [zshgdemoni.me](https://zshgdemoni.me/) 做成一座持续生长的“数字花园”。访客从一张免费花园通行证进入，沿着园丁档案、项目温室、工具棚、成长小径和花园信箱，可以看到我的项目、实习经历与学习记录。除了团队项目，我还做了课程教学数字人、多 Agent 旅行助手和自建域名邮箱。
+我把 [zshgdemoni.me](https://zshgdemoni.me/) 做成一座持续生长的“数字花园”。访客从一张免费花园通行证进入，沿着园丁档案、项目温室、工具棚、成长小径和花园信箱，可以看到我的项目、实习经历与学习记录。除了团队项目，我还做了课程教学数字人、多 Agent 旅行助手，并维护免费域名邮箱服务和个人 AI API 中转站。
 
 ## 代表作品
 
@@ -49,7 +49,8 @@
 | [Askio](projects/askio.md) | 用调查图、Agent 取证与经验检索辅助运维排障；负责架构设计和 Agent 核心实现。 | 产品架构 · 实习项目 |
 | [EduAvatar](https://github.com/gdemoni/EduAvatar) | 将课程检索、分场景讲解、语音合成和唇形同步串成数字人教学流程。 | AI 教学 · 项目实践 |
 | [Travel Agent](https://github.com/gdemoni/agent_ctrip_assistant) | 用主助理与四个领域助理处理旅行需求，修改类操作先等待用户确认。 | 多 Agent · 后端开发中 |
-| [Gdemoni Mail](https://github.com/gdemoni/cloud-mail) | 基于开源 Cloud Mail 部署和维护自己的域名邮箱。 | 开源部署 · 持续维护 |
+| [Gdemoni Mail](https://mail.zshgdemoni.me/) | 基于开源 [Cloud Mail](https://github.com/gdemoni/cloud-mail) 部署并维护，提供免费的 `@zshgdemoni.me` 域名邮箱。 | 开源部署 · 在线服务 |
+| [Gdemoni2API](https://app.zshgdemoni.me/) | 个人 AI API 中转站，提供兼容 OpenAI API 的接口与独立令牌管理。 | AI 工具 · 在线服务 |
 
 **[查看我的更多仓库 ↗](https://github.com/gdemoni?tab=repositories)**
 
